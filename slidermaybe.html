@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Fri, 02 Dec 2022 11:57:48 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+    <link href="slidercss.css" rel="stylesheet"> 
+ 
+    <!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+<!--Adding images-->
+  <div id="slider">
+    <ul id="slideWrap"> 
+      <li><img src="watercolorflowers.jpg" alt=""></li>
+      <li><img src="Color Harmony Watercolor - Phoebe Hegeler.jpg" alt=""></li>
+      <li><img src="Dadapoem.jpg" alt=""></li>
+      <li><img src="2D Sculpture.jpg" alt=""></li>
+      <li><img src="msculpture.jpg" alt=""></li>
+	  <li><img src="msculpture.jpg" alt=""></li>
+    </ul>
+	
+<!--lets ppl move left or right manually-->
+    <a id="prev" href="#">&#8810;</a>
+    <a id="next" href="#">&#8811;</a>
+  </div>
+
+
+  <script>
+    var responsiveSlider = function() {
+
+var slider = document.getElementById("slider");
+var sliderWidth = slider.offsetWidth;
+var slideList = document.getElementById("slideWrap");
+var count = 1;
+var items = slideList.querySelectorAll("li").length;
+var prev = document.getElementById("prev");
+var next = document.getElementById("next");
+
+window.addEventListener('resize', function() {
+  sliderWidth = slider.offsetWidth;
+});
+
+var prevSlide = function() {
+  if(count > 1) {
+    count = count - 2;
+    slideList.style.left = "-" + count * sliderWidth + "px";
+    count++;
+  }
+  else if(count = 1) {
+    count = items - 1;
+    slideList.style.left = "-" + count * sliderWidth + "px";
+    count++;
+  }
+};
+
+var nextSlide = function() {
+  if(count < items) {
+    slideList.style.left = "-" + count * sliderWidth + "px";
+    count++;
+  }
+  else if(count = items) {
+    slideList.style.left = "0px";
+    count = 1;
+  }
+};
+
+next.addEventListener("click", function() {
+  nextSlide();
+});
+
+prev.addEventListener("click", function() {
+  prevSlide();
+});
+
+setInterval(function() {
+  nextSlide()
+}, 5000);
+
+};
+
+window.onload = function() {
+responsiveSlider();  
+}
+
+
+  </script>
+</body>
+</html>

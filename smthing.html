@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Sun, 20 Nov 2022 07:57:55 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+    
+    <!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+<script>
+	function SubmitNameEmail() {
+	var Name = document.getElementById("inputname").value
+	var Email = document.getElementById("emailinput").value
+	var output = "New Contact Submitted, Name:" + Name + ", Email:" + Email
+	document.getElementById("outputcontact").innerHTML = output;
+	}
+	
+	function Addition() {
+	var Numberone = document.getElementById("no1").value
+	var Numbertwo = document.getElementById("no2").value
+	var one = parseInt(Numberone);
+	var two = parseInt(Numbertwo);
+	var sum = one + two
+	var output = "Sum of " + Numberone + " + " + Numbertwo + "=" + sum
+	document.getElementById("outputsum").innerHTML = output;
+	}
+
+</script>
+
+<center>
+<h1>Please enter your name:<br>
+<input type="text" id="inputname"><br>
+Please enter your email:<br>
+<input type="text" id="emailinput"><br>
+<button onclick="SubmitNameEmail()">Submit</button>
+<p id="outputcontact"></p>
+
+<h1>Please enter two numbers:<br>
+<input type="text" id="no1">
+<br>+<br>
+<input type="text" id="no2"><br>
+<button onclick="Addition()">Sum</button>
+<p id="outputsum"></p>
+  </body>
+</html>
