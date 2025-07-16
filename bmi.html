@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Wed, 23 Nov 2022 02:28:26 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+    
+    <!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+<script>
+function CalculateBMI() {
+var weight = Number(document.getElementById("inputnum1").value);
+var height = Number(document.getElementById("inputnum2").value);
+if (weight<=0) {
+        alert("Your weight cant be negative or zero")
+} 
+else if (weight>674){
+alert("Your weight cant be that high")
+}
+
+if (height<=0) {
+        alert("Your height cant be negative or zero")
+} 
+else if (height>2.72){
+alert("Your not that tall")
+};
+
+
+
+var bmi = weight/(height*height);
+document.getElementById("output").innerHTML="My BMI is" + bmi;
+}
+</script>
+
+BMI Calcutor
+<input type="number" id="inputnum1">
+<input type="number" id="inputnum2">
+<button type="button" id="bmibutton" onclick="CalculateBMI()">bmi score</button>
+<p id="output">BMI score</p>
+  </body>
+</html>

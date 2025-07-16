@@ -1,0 +1,1423 @@
+ <!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="Style.css" rel="stylesheet"> 
+ <link href="artstylecss2.css" rel="stylesheet"> 
+ 
+<style>
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding-left: 37px;
+  padding-right:45px;
+}
+
+
+.column {
+  float: left;
+  width: 16%;
+}
+
+.column {
+  padding-bottom:18px;
+}
+
+.listcolumn {
+  float: left;
+  width: 8.3%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+  background-color:black;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons visual*/
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: #5A5A5A;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+/*shadow*/                                
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transform: scale(1.1)
+}
+
+.object img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.list img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+</style>
+<body ccID="2326">
+
+<br ccID="2336"><br ccID="2340">
+<center ccID="2346">
+    <!-- filter Items -->
+    <nav ccID="2387">
+      <div ccID="2400" class="items">
+        <span ccID="2429" class="item active" data-name="all">All</span>
+        <span ccID="2491" class="item" data-name="watercolor">Watercolor</span>
+        <span ccID="2560" class="item" data-name="colorpencil">Color Pencil</span>
+        <span ccID="2632" class="item" data-name="collages">Collages</span>
+        <span ccID="2697" class="item" data-name="sculptures">Sculptures</span>
+		<span ccID="2760" class="item" data-name="sketches">Sketches</span>
+        <span ccID="2825" class="item" data-name="portraiture">Portraiture</span>
+      </div>
+	 
+    </nav>
+	
+	<br ccID="2922"><br ccID="2926">
+	
+<!--pics originally-->
+
+<div ccID="2961" class="row">
+  <div ccID="2982" class="column">
+  <div ccID="3006" class="object">
+  <div ccID="3030" class="image" data-name="sketches"><span ccID="3070">
+    <img ccID="3082" src="gl1.png" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="3212" class="column">
+  <div ccID="3236" class="object">
+  <div ccID="3260" class="image" data-name="sketches"><span ccID="3300">
+    <img ccID="3312" src="gellightsketch.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="3453" class="column">
+  <div ccID="3477" class="object">
+  <div ccID="3501" class="image" data-name="sketches"><span ccID="3541">
+    <img ccID="3553" src="gelllight2 (4).jpg" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="3694" class="column">
+	<div ccID="3717" class="object">
+	<div ccID="3740" class="image" data-name="watercolor"><span ccID="3782">
+    <img ccID="3794" src="Gellight3.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+<div ccID="3928" class="column">
+  <div ccID="3952" class="object">
+  <div ccID="3976" class="image" data-name="watercolor"><span ccID="4018">
+    <img ccID="4030" src="Gel Light Watercolor Portrait - Phoebe Hegeler Year 9.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="4210" class="column">
+  <div ccID="4234" class="object">
+  <div ccID="4258" class="image" data-name="sketches"><span ccID="4298">
+    <img ccID="4310" src="sculpd1.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+<div ccID="4442" style="clear:both;">
+<div ccID="4469" class="row">
+  <div ccID="4490" class="column">
+  <div ccID="4514" class="object">
+  <div ccID="4538" class="image" data-name="sketches"><span ccID="4578">
+    <img ccID="4590" src="hp1.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="4720" class="column">
+  <div ccID="4744" class="object">
+  <div ccID="4768" class="image" data-name="sketches"><span ccID="4808">
+    <img ccID="4820" src="sculpd2.jpg" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="4954" class="column">
+  <div ccID="4978" class="object">
+  <div ccID="5002" class="image" data-name="sculptures"><span ccID="5044">
+    <img ccID="5056" src="hpcut2.jpg" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="5189" class="column">
+	<div ccID="5212" class="object">
+	<div ccID="5235" class="image" data-name="sculptures"><span ccID="5277">
+    <img ccID="5289" src="hp2.jpg" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+<div ccID="5418" class="column">
+  <div ccID="5442" class="object">
+  <div ccID="5466" class="image" data-name="sculptures"><span ccID="5508">
+    <img ccID="5520" src="hpcut1.jpg" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="5654" class="column">
+  <div ccID="5678" class="object">
+  <div ccID="5702" class="image" data-name="sculptures"><span ccID="5744">
+    <img ccID="5756" src="hpthing1.jpg" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="5892" class="row">
+  <div ccID="5913" class="column">
+  <div ccID="5937" class="object">
+  <div ccID="5961" class="image" data-name="sculptures"><span ccID="6003">
+    <img ccID="6015" src="hpthing2.jpg" onclick="openModal();currentSlide(13)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="6151" class="column">
+  <div ccID="6175" class="object">
+  <div ccID="6199" class="image" data-name="sculptures"><span ccID="6241">
+    <img ccID="6253" src="hpthing3.jpg" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="6389" class="column">
+  <div ccID="6413" class="object">
+  <div ccID="6437" class="image" data-name="sculptures"><span ccID="6479">
+    <img ccID="6491" src="hppics.jpg" onclick="openModal();currentSlide(15)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="6625" class="column">
+	<div ccID="6648" class="object">
+	<div ccID="6671" class="image" data-name="sculptures"><span ccID="6713">
+    <img ccID="6725" src="hppics (2).jpg" onclick="openModal();currentSlide(16)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+<div ccID="6861" class="column">
+  <div ccID="6885" class="object">
+  <div ccID="6909" class="image" data-name="sculptures"><span ccID="6951">
+    <img ccID="6963" src="hppics3.jpg" onclick="openModal();currentSlide(17)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="7098" class="column">
+  <div ccID="7122" class="object">
+  <div ccID="7146" class="image" data-name="sketches"><span ccID="7186">
+    <img ccID="7198" src="clothes2.jpg" onclick="openModal();currentSlide(18)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="7334" class="row">
+  <div ccID="7355" class="column">
+  <div ccID="7379" class="object">
+   <div ccID="7404" class="image" data-name="portraiture"><span ccID="7447">
+    <img ccID="7459" src="Portraiture Clothes.jpg" onclick="openModal();currentSlide(19)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="7606" class="column">
+  <div ccID="7630" class="object">
+  <div ccID="7654" class="image" data-name="sketches"><span ccID="7694">
+    <img ccID="7706" src="beadsketch.jpg" onclick="openModal();currentSlide(20)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="7844" class="column">
+  <div ccID="7868" class="object">
+   <div ccID="7893" class="image" data-name="portraiture"><span ccID="7936">
+    <img ccID="7948" src="beads.jpg" onclick="openModal();currentSlide(21)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="8081" class="column">
+	<div ccID="8104" class="object">
+	<div ccID="8127" class="image" data-name="sketches"><span ccID="8167">
+    <img ccID="8179" src="pebblesketch.jpg" onclick="openModal();currentSlide(22)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+<div ccID="8317" class="column">
+  <div ccID="8341" class="object">
+   <div ccID="8366" class="image" data-name="portraiture"><span ccID="8409">
+    <img ccID="8421" src="pebbles.jpg" onclick="openModal();currentSlide(23)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="8556" class="column">
+  <div ccID="8580" class="object">
+  <div ccID="8604" class="image" data-name="sketches"><span ccID="8644">
+    <img ccID="8656" src="pinsssketch.jpg" onclick="openModal();currentSlide(24)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="8795" class="row">
+  <div ccID="8816" class="column">
+  <div ccID="8840" class="object">
+   <div ccID="8865" class="image" data-name="portraiture"><span ccID="8908">
+    <img ccID="8920" src="pins.jpg" onclick="openModal();currentSlide(25)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="9052" class="column">
+  <div ccID="9076" class="object">
+  <div ccID="9100" class="image" data-name="sketches"><span ccID="9140">
+    <img ccID="9152" src="flower1.png" onclick="openModal();currentSlide(26)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="9287" class="column">
+  <div ccID="9311" class="object">
+  <div ccID="9335" class="image" data-name="watercolor"><span ccID="9377">
+    <img ccID="9389" src="flower2.png" onclick="openModal();currentSlide(27)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="9524" class="column">
+	<div ccID="9547" class="object">
+	<div ccID="9570" class="image" data-name="colorpencil"><span ccID="9613">
+    <img ccID="9625" src="flower3.png" onclick="openModal();currentSlide(28)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+<div ccID="9758" class="column">
+  <div ccID="9782" class="object">
+  <div ccID="9806" class="image" data-name="watercolor"><span ccID="9848">
+    <img ccID="9860" src="flower4.png" onclick="openModal();currentSlide(29)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="9995" class="column">
+  <div ccID="10019" class="object">
+  <div ccID="10043" class="image" data-name="watercolor"><span ccID="10085">
+    <img ccID="10097" src="flower5.png" onclick="openModal();currentSlide(30)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="10232" class="row">
+  <div ccID="10253" class="column">
+  <div ccID="10277" class="object">
+  <div ccID="10301" class="image" data-name="watercolor"><span ccID="10343">
+    <img ccID="10355" src="watercolorflowers.jpg" onclick="openModal();currentSlide(31)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="10500" class="column">
+  <div ccID="10524" class="object">
+  <div ccID="10548" class="image" data-name="sketches"><span ccID="10588">
+    <img ccID="10600" src="parissketch1.png" onclick="openModal();currentSlide(32)" class="hover-shadow cursor">
+  </div>
+  </div>
+  </span>
+  </div>
+  <div ccID="10740" class="column">
+  <div ccID="10764" class="object">
+  <div ccID="10788" class="image" data-name="sketches"><span ccID="10828">
+    <img ccID="10840" src="parissketch2.png" onclick="openModal();currentSlide(33)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="10980" class="column">
+	<div ccID="11003" class="object">
+	<div ccID="11026" class="image" data-name="sketches"><span ccID="11066">
+    <img ccID="11078" src="parissketch3.png" onclick="openModal();currentSlide(34)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+<div ccID="11216" class="column">
+  <div ccID="11240" class="object">
+  <div ccID="11264" class="image" data-name="sketches"><span ccID="11304">
+    <img ccID="11316" src="parissketch4.png" onclick="openModal();currentSlide(35)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="11456" class="column">
+  <div ccID="11480" class="object">
+  <div ccID="11504" class="image" data-name="watercolor"><span ccID="11546">
+    <img ccID="11558" src="parisdrawing.jpg" onclick="openModal();currentSlide(36)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div><div ccID="11694" class="row">
+  <div ccID="11715" class="column">
+  <div ccID="11739" class="object">
+  <div ccID="11763" class="image" data-name="watercolor"><span ccID="11805">
+    <img ccID="11817" src="paris.jpg" onclick="openModal();currentSlide(37)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="11950" class="column">
+  <div ccID="11974" class="object">
+  <div ccID="11998" class="image" data-name="sketches"><span ccID="12038">
+    <img ccID="12050" src="mask1.jpg" onclick="openModal();currentSlide(38)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="12183" class="column">
+  <div ccID="12207" class="object">
+  <div ccID="12231" class="image" data-name="sculptures"><span ccID="12273">
+    <img ccID="12285" src="mask2.jpg" onclick="openModal();currentSlide(39)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="12418" class="column">
+	<div ccID="12441" class="object">
+	<div ccID="12464" class="image" data-name="sculptures"><span ccID="12506">
+    <img ccID="12518" src="mask3.jpg" onclick="openModal();currentSlide(40)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+<div ccID="12649" class="column">
+  <div ccID="12673" class="object">
+  <div ccID="12697" class="image" data-name="sculptures"><span ccID="12739">
+    <img ccID="12751" src="mask4.jpg" onclick="openModal();currentSlide(41)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="12884" class="column">
+  <div ccID="12908" class="object">
+  <div ccID="12932" class="image" data-name="sculptures"><span ccID="12974">
+    <img ccID="12986" src="mask5(2).jpg" onclick="openModal();currentSlide(42)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="13122" class="row">
+  <div ccID="13143" class="column">
+  <div ccID="13167" class="object">
+  <div ccID="13191" class="image" data-name="sculptures"><span ccID="13233">
+    <img ccID="13245" src="mask6.jpg" onclick="openModal();currentSlide(43)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="13378" class="column">
+  <div ccID="13402" class="object">
+  <div ccID="13426" class="image" data-name="sculptures"><span ccID="13468">
+    <img ccID="13480" src="Mask Summative - Phoebe Hegeler.jpg" onclick="openModal();currentSlide(44)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="13639" class="column">
+  <div ccID="13663" class="object">
+  <div ccID="13687" class="image" data-name="colorpencil"><span ccID="13730">
+    <img ccID="13742" src="Mask Illustration - Phoebe Hegeler.jpg"  onclick="openModal();currentSlide(45)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="13905" class="column">
+	<div ccID="13928" class="object">
+	<div ccID="13951" class="image" data-name="watercolor"><span ccID="13993">
+    <img ccID="14005" src="Color Harmony Watercolor - Phoebe Hegeler.jpg" onclick="openModal();currentSlide(46)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+<div ccID="14172" class="column">
+  <div ccID="14196" class="object">
+  <div ccID="14220" class="image" data-name="sculptures"><span ccID="14262">
+    <img ccID="14274" src="msculpture.jpg" onclick="openModal();currentSlide(47)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="14412" class="column">
+  <div ccID="14436" class="object">
+  <div ccID="14460" class="image" data-name="sculptures"><span ccID="14502">
+    <img ccID="14514" src="msculpture2.jpg" onclick="openModal();currentSlide(48)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="14653" class="row">
+  <div ccID="14674" class="column">
+  <div ccID="14698" class="object">
+  <div ccID="14722" class="image" data-name="sculptures"><span ccID="14764">
+    <img ccID="14776" src="tissue.jpg" onclick="openModal();currentSlide(49)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="14910" class="column">
+  <div ccID="14934" class="object">
+  <div ccID="14958" class="image" data-name="sculptures"><span ccID="15000">
+    <img ccID="15012" src="oisculpture.jpg" onclick="openModal();currentSlide(50)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="15151" class="column">
+  <div ccID="15175" class="object">
+  <div ccID="15199" class="image" data-name="sculptures"><span ccID="15241">
+    <img ccID="15253" src="oisculpture2.jpg" onclick="openModal();currentSlide(51)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="15393" class="column">
+	<div ccID="15416" class="object">
+	<div ccID="15439" class="image" data-name="sculptures"><span ccID="15481">
+    <img ccID="15493" src="reliefflower.jpg" onclick="openModal();currentSlide(52)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+<div ccID="15631" class="column">
+  <div ccID="15655" class="object">
+  <div ccID="15679" class="image" data-name="collages"><span ccID="15719">
+    <img ccID="15731" src="dreamscape.jpg" onclick="openModal();currentSlide(53)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="15869" class="column">
+  <div ccID="15893" class="object">
+  <div ccID="15917" class="image" data-name="collages"><span ccID="15957">
+    <img ccID="15969" src="Surreal Portrait Summative - Phoebe Hegeler.jpg" onclick="openModal();currentSlide(54)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="16140" class="row">
+  <div ccID="16161" class="column">
+  <div ccID="16185" class="object">
+  <div ccID="16209" class="image" data-name="sketches"><span ccID="16249">
+    <img ccID="16261" src="spsketch1.jpg" onclick="openModal();currentSlide(55)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="16398" class="column">
+  <div ccID="16422" class="object">
+  <div ccID="16446" class="image" data-name="sketches"><span ccID="16486">
+    <img ccID="16498" src="spsketch2.jpg" onclick="openModal();currentSlide(56)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="16635" class="column">
+  <div ccID="16659" class="object">
+  <div ccID="16683" class="image" data-name="sketches"><span ccID="16723">
+    <img ccID="16735" src="spsketch3.jpg" onclick="openModal();currentSlide(57)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="16872" class="column">
+	<div ccID="16895" class="object">
+	<div ccID="16918" class="image" data-name="sketches"><span ccID="16958">
+    <img ccID="16970" src="selfportrait.jpg" onclick="openModal();currentSlide(58)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+<div ccID="17108" class="column">
+  <div ccID="17132" class="object">
+  <div ccID="17156" class="image" data-name="sketches"><span ccID="17196">
+    <img ccID="17208" src="sp1(1).jpg" onclick="openModal();currentSlide(59)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="17342" class="column">
+  <div ccID="17366" class="object">
+  <div ccID="17390" class="image" data-name="watercolor"><span ccID="17432">
+    <img ccID="17444" src="sp2.jpg" onclick="openModal();currentSlide(60)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="17575" class="row">
+  <div ccID="17596" class="column">
+  <div ccID="17620" class="object">
+  <div ccID="17644" class="image" data-name="watercolor"><span ccID="17686">
+    <img ccID="17698" src="sp3.jpg" onclick="openModal();currentSlide(61)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="17829" class="column">
+  <div ccID="17853" class="object">
+  <div ccID="17877" class="image" data-name="watercolor"><span ccID="17919">
+    <img ccID="17931" src="sp4.jpg" onclick="openModal();currentSlide(62)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="18062" class="column">
+  <div ccID="18086" class="object">
+  <div ccID="18110" class="image" data-name="watercolor"><span ccID="18152">
+    <img ccID="18164" src="sp5.jpg" onclick="openModal();currentSlide(63)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="18295" class="column">
+	<div ccID="18318" class="object">
+	<div ccID="18341" class="image" data-name="watercolor"><span ccID="18383">
+    <img ccID="18395" src="sp6.jpg" onclick="openModal();currentSlide(64)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+<div ccID="18524" class="column">
+  <div ccID="18548" class="object">
+  <div ccID="18572" class="image" data-name="watercolor"><span ccID="18614">
+    <img ccID="18626" src="sp7.jpg" onclick="openModal();currentSlide(65)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="18757" class="column">
+  <div ccID="18781" class="object">
+  <div ccID="18805" class="image" data-name="watercolor"><span ccID="18847">
+    <img ccID="18859" src="Surreal Self Portrait - Phoebe Hegeler.jpg" onclick="openModal();currentSlide(66)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="19025" class="row">
+  <div ccID="19046" class="column">
+  <div ccID="19070" class="object">
+  <div ccID="19094" class="image" data-name="sketches"><span ccID="19134">
+    <img ccID="19146" src="twm1.jpg" onclick="openModal();currentSlide(67)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="19278" class="column">
+  <div ccID="19302" class="object">
+  <div ccID="19326" class="image" data-name="sketches"><span ccID="19366">
+    <img ccID="19378" src="twm2.jpg" onclick="openModal();currentSlide(68)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="19510" class="column">
+  <div ccID="19534" class="object">
+  <div ccID="19558" class="image" data-name="sketches"><span ccID="19598">
+    <img ccID="19610" src="tm2.jpg" onclick="openModal();currentSlide(69)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="19741" class="column">
+	<div ccID="19764" class="object">
+	<div ccID="19787" class="image" data-name="sketches"><span ccID="19827">
+    <img ccID="19839" src="tm3.jpg" onclick="openModal();currentSlide(70)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+<div ccID="19968" class="column">
+  <div ccID="19992" class="object">
+  <div ccID="20016" class="image" data-name="sketches"><span ccID="20056">
+    <img ccID="20068" src="tm4.jpg" onclick="openModal();currentSlide(71)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="20199" class="column">
+  <div ccID="20223" class="object">
+  <div ccID="20247" class="image" data-name="watercolor"><span ccID="20289">
+    <img ccID="20301" src="tm5.jpg" onclick="openModal();currentSlide(72)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="20432" class="column">
+  <div ccID="20456" class="object">
+  <div ccID="20480" class="image" data-name="watercolor"><span ccID="20522">
+    <img ccID="20534" src="tm6.jpg" onclick="openModal();currentSlide(73)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="20665" class="column">
+	<div ccID="20688" class="object">
+	<div ccID="20711" class="image" data-name="watercolor"><span ccID="20753">
+    <img ccID="20765" src="tm7.jpg" onclick="openModal();currentSlide(74)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+<div ccID="20894" class="column">
+  <div ccID="20918" class="object">
+  <div ccID="20942" class="image" data-name="watercolor"><span ccID="20984">
+    <img ccID="20996" src="tm8.jpg" onclick="openModal();currentSlide(75)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="21127" class="column">
+  <div ccID="21151" class="object">
+  <div ccID="21175" class="image" data-name="watercolor"><span ccID="21217">
+    <img ccID="21229" src="Watercolor Montage - Phoebe Hegeler Grade 9.jpg" onclick="openModal();currentSlide(76)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div><div ccID="21396" class="row">
+  <div ccID="21417" class="column">
+  <div ccID="21441" class="object">
+  <div ccID="21465" class="image" data-name="sketches"><span ccID="21505">
+    <img ccID="21517" src="triadicsketch.png" onclick="openModal();currentSlide(77)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="21658" class="column">
+  <div ccID="21682" class="object">
+  <div ccID="21706" class="image" data-name="sketches"><span ccID="21746">
+    <img ccID="21758" src="triadicsketch2.png" onclick="openModal();currentSlide(78)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="21900" class="column">
+  <div ccID="21924" class="object">
+  <div ccID="21948" class="image" data-name="sketches"><span ccID="21988">
+    <img ccID="22000" src="triadicsketch3.png" onclick="openModal();currentSlide(79)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="22142" class="column">
+	<div ccID="22165" class="object">
+	<div ccID="22188" class="image" data-name="sketches"><span ccID="22228">
+    <img ccID="22240" src="triadicsketch4.png" onclick="openModal();currentSlide(80)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+<div ccID="22380" class="column">
+  <div ccID="22404" class="object">
+  <div ccID="22428" class="image" data-name="sketches"><span ccID="22468">
+    <img ccID="22480" src="triadicwithoutcolor(2).jpg" onclick="openModal();currentSlide(81)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  <div ccID="22630" class="column">
+  <div ccID="22654" class="object">
+  <div ccID="22678" class="image" data-name="colorpencil"><span ccID="22721">
+    <img ccID="22733" src="Triadic color scheme color pencils.jpg" onclick="openModal();currentSlide(82)" class="hover-shadow cursor">
+  </span>
+  </div>
+  </div>
+  </div>
+  </div>
+
+<div ccID="22905" id="myModal" class="modal">
+  <span ccID="22941" class="close cursor" onclick="closeModal()">&times;</span>
+  <div ccID="23009" class="modal-content">
+
+ <!--show zoomed in pics-->
+ 
+    <div ccID="23076" class="mySlides">
+	<center ccID="23101">
+      <div ccID="23117" class="numbertext">1 / 82</div>
+      <img ccID="23161" src="gl1.png" style="width:26%">
+	  
+    </div>
+
+    <div ccID="23223" class="mySlides">
+	<center ccID="23248">
+      <div ccID="23264" class="numbertext">2 / 82</div>
+      <img ccID="23308" src="gellightsketch.jpg" style="width:33.2%">
+	  
+    </div>
+
+    <div ccID="23383" class="mySlides">
+	<center ccID="23408">
+      <div ccID="23424" class="numbertext">3 / 82</div>
+      <img ccID="23468" src="gelllight2 (4).jpg" style="width:28.7%">
+    </div>
+    
+    <div ccID="23542" class="mySlides">
+	<center ccID="23567">
+      <div ccID="23583" class="numbertext">4 / 82</div>
+      <img ccID="23627" src="Gellight3.jpg" style="width:31.9%">
+    </div>
+	
+	<div ccID="23690" class="mySlides">
+	<center ccID="23715">
+      <div ccID="23731" class="numbertext">5 / 82</div>
+      <img ccID="23775" src="Gel Light Watercolor Portrait - Phoebe Hegeler Year 9.jpg" style="width:34.3%">
+    </div>
+
+    <div ccID="23884" class="mySlides">
+	<center ccID="23909">
+      <div ccID="23925" class="numbertext">6 / 82</div>
+      <img ccID="23969" src="sculpd1.jpg" style="width:29.7%">
+    </div>
+	 <div ccID="24028" class="mySlides">
+	 <center ccID="24054">
+      <div ccID="24070" class="numbertext">7 / 82</div>
+      <img ccID="24114" src="hp1.jpg" style="width:28.2%">
+    </div>
+
+    <div ccID="24173" class="mySlides">
+	<center ccID="24198">
+      <div ccID="24214" class="numbertext">8 / 82</div>
+      <img ccID="24258" src="sculpd2.jpg" style="width:28.7%">
+    </div>
+
+    <div ccID="24321" class="mySlides">
+	<center ccID="24346">
+      <div ccID="24362" class="numbertext">9 / 82</div>
+      <img ccID="24406" src="hpcut2.jpg" style="width:35.8%">
+    </div>
+    
+    <div ccID="24472" class="mySlides">
+	<center ccID="24497">
+      <div ccID="24513" class="numbertext">10 / 82</div>
+      <img ccID="24558" src="hp2.jpg" style="width:39.9%">
+    </div>
+	
+	<div ccID="24615" class="mySlides">
+	<center ccID="24640">
+      <div ccID="24656" class="numbertext">11 / 82</div>
+      <img ccID="24701" src="hpcut1.jpg" style="width:27.3%">
+    </div>
+
+    <div ccID="24763" class="mySlides">
+	<center ccID="24788">
+      <div ccID="24804" class="numbertext">12 / 82</div>
+      <img ccID="24849" src="hpthing1.jpg" style="width:20.85%">
+    </div>
+	  <div ccID="24911" class="mySlides">
+	  <center ccID="24938">
+      <div ccID="24954" class="numbertext">13 / 82</div>
+      <img ccID="24999" src="hpthing2.jpg" style="width:26.5%">
+    </div>
+
+    <div ccID="25063" class="mySlides">
+	<center ccID="25088">
+      <div ccID="25104" class="numbertext">14 / 82</div>
+      <img ccID="25149" src="hpthing3.jpg" style="width:23.45%">
+    </div>
+
+    <div ccID="25214" class="mySlides">
+	<center ccID="25239">
+      <div ccID="25255" class="numbertext">15 / 82</div>
+      <img ccID="25300" src="hppics.jpg" style="width:27.45%">
+    </div>
+    
+    <div ccID="25367" class="mySlides">
+	<center ccID="25392">
+      <div ccID="25408" class="numbertext">16 / 82</div>
+      <img ccID="25453" src="hppics (2).jpg" style="width:23.5%">
+    </div>
+	
+	<div ccID="25517" class="mySlides">
+	<center ccID="25542">
+      <div ccID="25558" class="numbertext">17 / 82</div>
+      <img ccID="25603" src="hppics3.jpg" style="width:29.5%">
+    </div>
+
+    <div ccID="25666" class="mySlides">
+	<center ccID="25691">
+      <div ccID="25707" class="numbertext">18 / 82</div>
+      <img ccID="25752" src="clothes2.jpg" style="width:50.8%">
+    </div>
+	 <div ccID="25812" class="mySlides">
+	 <center ccID="25838">
+      <div ccID="25854" class="numbertext">19 / 82</div>
+      <img ccID="25899" src="Portraiture Clothes.jpg" style="width:49.3%">
+    </div>
+
+    <div ccID="25974" class="mySlides">
+	<center ccID="25999">
+      <div ccID="26015" class="numbertext">20 / 82</div>
+      <img ccID="26060" src="beadsketch.jpg" style="width:59.5%">
+    </div>
+
+    <div ccID="26126" class="mySlides">
+	<center ccID="26151">
+      <div ccID="26167" class="numbertext">21 / 82</div>
+      <img ccID="26212" src="beads.jpg" style="width:37.7%">
+    </div>
+    
+    <div ccID="26277" class="mySlides">
+	<center ccID="26302">
+      <div ccID="26318" class="numbertext">22 / 82</div>
+      <img ccID="26363" src="pebblesketch.jpg" style="width:60.4%">
+    </div>
+	
+	<div ccID="26429" class="mySlides">
+	<center ccID="26454">
+      <div ccID="26470" class="numbertext">23 / 82</div>
+      <img ccID="26515" src="pebbles.jpg" style="width:31.6%">
+    </div>
+
+    <div ccID="26578" class="mySlides">
+	<center ccID="26603">
+      <div ccID="26619" class="numbertext">24 / 82</div>
+      <img ccID="26664" src="pinsssketch.jpg" style="width:61%">
+    </div>
+	
+	    <div ccID="26731" class="mySlides">
+		<center ccID="26757">
+      <div ccID="26773" class="numbertext">25 / 82</div>
+      <img ccID="26818" src="pins.jpg" style="width:45%">
+    </div>
+
+    <div ccID="26876" class="mySlides">
+	<center ccID="26901">
+      <div ccID="26917" class="numbertext">26 / 82</div>
+      <img ccID="26962" src="flower1.png" style="width:30.2%">
+    </div>
+
+    <div ccID="27025" class="mySlides">
+	<center ccID="27050">
+      <div ccID="27066" class="numbertext">27 / 82</div>
+      <img ccID="27111" src="flower2.png" style="width:34.5%">
+    </div>
+    
+    <div ccID="27178" class="mySlides">
+	<center ccID="27203">
+      <div ccID="27219" class="numbertext">28 / 82</div>
+      <img ccID="27264" src="flower3.png" style="width:35.6%">
+    </div>
+	
+	<div ccID="27325" class="mySlides">
+	<center ccID="27350">
+      <div ccID="27366" class="numbertext">29 / 82</div>
+      <img ccID="27411" src="flower4.png" style="width:32.4%">
+    </div>
+
+    <div ccID="27474" class="mySlides">
+	<center ccID="27499">
+      <div ccID="27515" class="numbertext">30 / 82</div>
+      <img ccID="27560" src="flower5.png" style="width:51.6%">
+    </div>
+	 <div ccID="27619" class="mySlides">
+	 <center ccID="27645">
+      <div ccID="27661" class="numbertext">31 / 82</div>
+      <img ccID="27706" src="watercolorflowers.jpg" style="width:56.2%">
+    </div>
+
+    <div ccID="27779" class="mySlides">
+	<center ccID="27804">
+      <div ccID="27820" class="numbertext">32 / 82</div>
+      <img ccID="27865" src="parissketch1.png" style="width:30.7%">
+    </div>
+
+    <div ccID="27933" class="mySlides">
+	<center ccID="27958">
+      <div ccID="27974" class="numbertext">33 / 82</div>
+      <img ccID="28019" src="parissketch2.png" style="width:31.8%">
+    </div>
+    
+    <div ccID="28091" class="mySlides">
+	<center ccID="28116">
+      <div ccID="28132" class="numbertext">34 / 82</div>
+      <img ccID="28177" src="parissketch3.png" style="width:32.1%">
+    </div>
+	
+	<div ccID="28243" class="mySlides">
+	<center ccID="28268">
+      <div ccID="28284" class="numbertext">35 / 82</div>
+      <img ccID="28329" src="parissketch4.png" style="width:34.8%">
+    </div>
+
+    <div ccID="28397" class="mySlides">
+	<center ccID="28422">
+      <div ccID="28438" class="numbertext">36 / 82</div>
+      <img ccID="28483" src="parisdrawing.jpg" style="width:31.6%">
+    </div>
+	
+	  <div ccID="28551" class="mySlides">
+	  <center ccID="28578">
+      <div ccID="28594" class="numbertext">37 / 82</div>
+      <img ccID="28639" src="paris.jpg" style="width:32%">
+    </div>
+
+    <div ccID="28698" class="mySlides">
+	<center ccID="28723">
+      <div ccID="28739" class="numbertext">38 / 82</div>
+      <img ccID="28784" src="mask1.jpg" style="width:39.7%">
+    </div>
+
+    <div ccID="28845" class="mySlides">
+	<center ccID="28870">
+      <div ccID="28886" class="numbertext">39 / 82</div>
+      <img ccID="28931" src="mask2.jpg" style="width:36.05%">
+    </div>
+    
+    <div ccID="28997" class="mySlides">
+	<center ccID="29022">
+      <div ccID="29038" class="numbertext">40 / 82</div>
+      <img ccID="29083" src="mask3.jpg" style="width:28.9%">
+    </div>
+	
+	<div ccID="29142" class="mySlides">
+	<center ccID="29167">
+      <div ccID="29183" class="numbertext">41 / 82</div>
+      <img ccID="29228" src="mask4.jpg" style="width:42.8%">
+    </div>
+
+    <div ccID="29289" class="mySlides">
+	<center ccID="29314">
+      <div ccID="29330" class="numbertext">42 / 82</div>
+      <img ccID="29375" src="mask5(2).jpg" style="width:40.3%">
+    </div>
+	
+	 <div ccID="29438" class="mySlides">
+	 <center ccID="29464">
+      <div ccID="29480" class="numbertext">43 / 82</div>
+      <img ccID="29525" src="mask6.jpg" style="width:36.7%">
+    </div>
+
+    <div ccID="29586" class="mySlides">
+	<center ccID="29611">
+      <div ccID="29627" class="numbertext">44 / 82</div>
+      <img ccID="29672" src="Mask Summative - Phoebe Hegeler.jpg" style="width:36.1%">
+    </div>
+
+    <div ccID="29759" class="mySlides">
+	<center ccID="29784">
+      <div ccID="29800" class="numbertext">45 / 82</div>
+      <img ccID="29845" src="Mask Illustration - Phoebe Hegeler.jpg" style="width:31.2%">
+    </div>
+    
+    <div ccID="29939" class="mySlides">
+	<center ccID="29964">
+      <div ccID="29980" class="numbertext">46 / 82</div>
+      <img ccID="30025" src="Color Harmony Watercolor - Phoebe Hegeler.jpg" style="width:60.2%">
+    </div>
+	
+	<div ccID="30120" class="mySlides">
+      <div ccID="30150" class="numbertext">47 / 82</div>
+	  <center ccID="30192">
+      <img ccID="30208" src="msculpture.jpg" style="width:62.1%">
+    </div>
+
+    <div ccID="30274" class="mySlides">
+      <div ccID="30304" class="numbertext">48 / 82</div>
+	  <center ccID="30346">
+      <img ccID="30362" src="msculpture2.jpg" style="width:48.6%">
+    </div>
+	
+	    <div ccID="30431" class="mySlides">
+		<center ccID="30457">
+      <div ccID="30473" class="numbertext">49 / 82</div>
+      <img ccID="30518" src="tissue.jpg" style="width:57.1%">
+    </div>
+
+    <div ccID="30580" class="mySlides">
+	<center ccID="30605">
+      <div ccID="30621" class="numbertext">50 / 82</div>
+      <img ccID="30666" src="oisculpture.jpg" style="width:42.5%">
+    </div>
+
+    <div ccID="30733" class="mySlides">
+	<center ccID="30758">
+      <div ccID="30774" class="numbertext">51 / 82</div>
+      <img ccID="30819" src="oisculpture2.jpg" style="width:62.3%">
+    </div>
+    
+    <div ccID="30891" class="mySlides">
+	<center ccID="30916">
+      <div ccID="30932" class="numbertext">52 / 82</div>
+      <img ccID="30977" src="reliefflower.jpg" style="width:57.7%">
+    </div>
+	
+	<div ccID="31043" class="mySlides">
+	<center ccID="31068">
+      <div ccID="31084" class="numbertext">53 / 82</div>
+      <img ccID="31129" src="dreamscape.jpg" style="width:30.7%">
+    </div>
+
+    <div ccID="31195" class="mySlides">
+	<center ccID="31220">
+      <div ccID="31236" class="numbertext">54 / 82</div>
+      <img ccID="31281" src="Surreal Portrait Summative - Phoebe Hegeler.jpg" style="width:36.6%">
+    </div>
+	 <div ccID="31376" class="mySlides">
+	 <center ccID="31402">
+      <div ccID="31418" class="numbertext">55 / 82</div>
+      <img ccID="31463" src="spsketch1.jpg" style="width:34.9%">
+    </div>
+
+    <div ccID="31528" class="mySlides">
+	<center ccID="31553">
+      <div ccID="31569" class="numbertext">56 / 82</div>
+      <img ccID="31614" src="spsketch2.jpg" style="width:31.8%">
+    </div>
+
+    <div ccID="31679" class="mySlides">
+	<center ccID="31704">
+      <div ccID="31720" class="numbertext">57 / 82</div>
+      <img ccID="31765" src="spsketch3.jpg" style="width:43.2%">
+    </div>
+    
+    <div ccID="31834" class="mySlides">
+	<center ccID="31859">
+      <div ccID="31875" class="numbertext">58 / 82</div>
+      <img ccID="31920" src="selfportrait.jpg" style="width:29.5%">
+    </div>
+	
+	<div ccID="31986" class="mySlides">
+	<center ccID="32011">
+      <div ccID="32027" class="numbertext">59 / 82</div>
+      <img ccID="32072" src="sp1(1).jpg" style="width:29.7%">
+    </div>
+
+    <div ccID="32134" class="mySlides">
+	<center ccID="32159">
+      <div ccID="32175" class="numbertext">60 / 82</div>
+      <img ccID="32220" src="sp2.jpg" style="width:29.5%">
+    </div>
+	  <div ccID="32276" class="mySlides">
+	  <center ccID="32303">
+      <div ccID="32319" class="numbertext">61 / 82</div>
+      <img ccID="32364" src="sp3.jpg" style="width:31.8%">
+    </div>
+
+    <div ccID="32423" class="mySlides">
+	<center ccID="32448">
+      <div ccID="32464" class="numbertext">62 / 82</div>
+      <img ccID="32509" src="sp4.jpg" style="width:35.5%">
+    </div>
+
+    <div ccID="32568" class="mySlides">
+	<center ccID="32593">
+      <div ccID="32609" class="numbertext">63 / 82</div>
+      <img ccID="32654" src="sp5.jpg" style="width:28%">
+    </div>
+    
+    <div ccID="32715" class="mySlides">
+	<center ccID="32740">
+      <div ccID="32756" class="numbertext">64 / 82</div>
+      <img ccID="32801" src="sp6.jpg" style="width:29.7%">
+    </div>
+	
+	<div ccID="32858" class="mySlides">
+	<center ccID="32883">
+      <div ccID="32899" class="numbertext">65 / 82</div>
+      <img ccID="32944" src="sp7.jpg" style="width:28.9%">
+    </div>
+
+    <div ccID="33003" class="mySlides">
+	<center ccID="33028">
+      <div ccID="33044" class="numbertext">66 / 82</div>
+      <img ccID="33089" src="Surreal Self Portrait - Phoebe Hegeler.jpg" style="width:29.3%">
+    </div>
+	 <div ccID="33179" class="mySlides">
+	 <center ccID="33205">
+      <div ccID="33221" class="numbertext">67 / 82</div>
+      <img ccID="33266" src="twm1.jpg" style="width:30.6%">
+    </div>
+
+    <div ccID="33326" class="mySlides">
+	<center ccID="33351">
+      <div ccID="33367" class="numbertext">68 / 82</div>
+      <img ccID="33412" src="twm2.jpg" style="width:30.9%">
+    </div>
+
+    <div ccID="33472" class="mySlides">
+	<center ccID="33497">
+      <div ccID="33513" class="numbertext">69 / 82</div>
+      <img ccID="33558" src="tm2.jpg" style="width:29.7%">
+    </div>
+    
+    <div ccID="33621" class="mySlides">
+	<center ccID="33646">
+      <div ccID="33662" class="numbertext">70 / 82</div>
+      <img ccID="33707" src="tm3.jpg" style="width:31.1%">
+    </div>
+	
+	<div ccID="33764" class="mySlides">
+	<center ccID="33789">
+      <div ccID="33805" class="numbertext">71 / 82</div>
+      <img ccID="33850" src="tm4.jpg" style="width:30.1%">
+    </div>
+
+    <div ccID="33909" class="mySlides">
+	<center ccID="33934">
+      <div ccID="33950" class="numbertext">72 / 82</div>
+      <img ccID="33995" src="tm5.jpg" style="width:32.1%">
+    </div>
+	
+	    <div ccID="34056" class="mySlides">
+		<center ccID="34082">
+      <div ccID="34098" class="numbertext">73 / 82</div>
+      <img ccID="34143" src="tm6.jpg" style="width:28.4%">
+    </div>
+
+    <div ccID="34202" class="mySlides">
+	<center ccID="34227">
+      <div ccID="34243" class="numbertext">74 / 82</div>
+      <img ccID="34288" src="tm7.jpg" style="width:29.3%">
+    </div>
+
+    <div ccID="34347" class="mySlides">
+	<center ccID="34372">
+      <div ccID="34388" class="numbertext">75 / 82</div>
+      <img ccID="34433" src="tm8.jpg" style="width:29.4%">
+    </div>
+    
+    <div ccID="34496" class="mySlides">
+	<center ccID="34521">
+      <div ccID="34537" class="numbertext">76 / 82</div>
+      <img ccID="34582" src="Watercolor Montage - Phoebe Hegeler Grade 9.jpg" style="width:31.8%">
+    </div>
+	
+	<div ccID="34679" class="mySlides">
+	<center ccID="34704">
+      <div ccID="34720" class="numbertext">77 / 82</div>
+      <img ccID="34765" src="triadicsketch.png" style="width:57.2%">
+    </div>
+
+    <div ccID="34834" class="mySlides">
+      <div ccID="34864" class="numbertext">78 / 82</div>
+	  <center ccID="34906">
+      <img ccID="34922" src="triadicsketch2.png" style="width:60.1%">
+    </div>
+	 <div ccID="34988" class="mySlides">
+      <div ccID="35018" class="numbertext">79 / 82</div>
+	  <center ccID="35060">
+      <img ccID="35076" src="triadicsketch3.png" style="width:60.5%">
+    </div>
+
+    <div ccID="35146" class="mySlides">
+	<center ccID="35171">
+      <div ccID="35187" class="numbertext">80 / 82</div>
+      <img ccID="35232" src="triadicsketch4.png" style="width:28.2%">
+    </div>
+
+    <div ccID="35302" class="mySlides">
+	<center ccID="35327">
+      <div ccID="35343" class="numbertext">81 / 82</div>
+      <img ccID="35388" src="triadicwithoutcolor(2).jpg" style="width:31%">
+    </div>
+    
+    <div ccID="35468" class="mySlides">
+	<center ccID="35493">
+      <div ccID="35509" class="numbertext">82 / 82</div>
+      <img ccID="35554" src="Triadic color scheme color pencils.jpg" style="width:33.5%">
+    </div>
+    
+<!--lets person move next of back-->
+    <a ccID="35686" class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a ccID="35745" class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div ccID="35805" class="caption-container">
+      <p ccID="35844" id="caption"></p>
+    </div>
+	
+  </div>
+</div>
+<script ccID="35899">
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+/*closes pic*/
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+/*to move back adn forth*/
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+/*shows current slide*/
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  /*list of pics*/
+  var slides = document.getElementsByClassName("mySlides");
+  
+  /*if on last slide going to next back to first pic*/
+  if (n > slides.length) {slideIndex = 1}
+  /*if on first slide go to previous go to last pic*/
+  if (n < 1) {slideIndex = slides.length}
+  /*showing next pics*/
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  /*close zoomed in pic*/
+  slides[slideIndex-1].style.display = "block";
+
+}
+
+//selecting all required elements
+const filterItem = document.querySelector(".items");
+const filterImg = document.querySelectorAll(".gallery .image");
+
+window.onload = ()=>{ //after window loaded
+  filterItem.onclick = (selectedItem)=>{ //if user click on a button
+    if(selectedItem.target.classList.contains("item")){ //if user selected item has .item class
+      filterItem.querySelector(".active").classList.remove("active"); //remove the active class which is in first item
+      selectedItem.target.classList.add("active"); //add that active class on user selected item
+      
+	  let filterName = selectedItem.target.getAttribute("data-name"); //getting data-name value of user selected item and store in a filtername variable
+      
+	  //problem here probably
+	  filterImg.forEach((image) => {
+        let filterImges = image.getAttribute("data-name"); //getting image data-name value
+        
+		//or here 
+		//if user selected item data-name value is equal to images data-name value
+        //or user selected item data-name value is equal to "all"
+        if((filterImges == filterName) || (filterName == "all")){
+          image.classList.remove("hide"); //first remove the hide class from the image
+          image.classList.add("show"); //add show class in image
+        }else{
+          image.classList.add("hide"); //add hide class in image
+          image.classList.remove("show"); //remove show class from the image
+        }
+      });
+    }
+  }
+  for (let i = 0; i < filterImg.length; i++) {
+    filterImg[i].setAttribute("onclick", "preview(this)"); //adding onclick attribute in all available images
+  }
+}
+
+</script>
+    
+</body>
+</html>

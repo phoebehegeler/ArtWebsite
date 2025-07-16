@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Fri, 02 Dec 2022 15:10:10 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+    <link href="Style.css" rel="stylesheet"> 
+ 
+    <!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body style="text-align:center;">
+  
+    <div id="output-text">
+        <h1 style="color:green;">
+            GeeksForGeeks
+        </h1>
+    </div>
+  
+    <select id="input-font" class="input"
+        onchange="changeFontStyle (this);">
+  
+        <option value="Times New Roman" 
+            selected="selected">
+            Times New Roman
+        </option>
+        <option value="Arial">Arial</option>
+        <option value="fantasy">Fantasy</option>
+        <option value="cursive">cursive</option>
+    </select>
+  
+    <script>
+        var changeFontStyle = function (font) {
+            document.getElementById(
+                "output-text").style.fontFamily
+                        = font.value;
+        }
+    </script>
+	
+	<div class="dropdown1">
+  <button class="dropbtn1 button1">Font</button>
+  <div class="dropdown1-content" style="left:0;">
+  <div id="input-font" class="input"
+        onchange="changeFontStyle (this);">
+  <option value="Arial" 
+            selected="selected">
+            Times New Roman
+  <a href="#">Times New Roman</a>
+  <a href="#">Sans Serif</a>
+   <a href="#">Handlee</a>
+  <a href="#">Comfortaa</a>
+  <a href="#">Pacifico</a>
+   <a href="#">Comic Sans</a>
+  <a href="#">Script</a>
+  </div>
+</div>
+
+  </body>
+</html>

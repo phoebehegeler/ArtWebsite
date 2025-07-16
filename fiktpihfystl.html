@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Tue, 18 Apr 2023 00:47:13 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+    
+    <!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+<link href="csstest1.css" rel="stylesheet">
+
+<a class="btn zoom"><i class="fas fa-search-plus"></i></a>
+<a class="btn zoom-out"><i class="fas fa-search-minus"></i></a>
+<a class="btn zoom-init"><i class="fas fa-recycle"></i></a>
+
+<div class="box target">
+  <h3>Target Box</h3>
+  <p>Height 300px</p>
+  <p>Width 300px</p>
+</div>
+<div class="box not-target">
+  <h3>Not Target Box</h3>
+  <p>Height 300px</p>
+  <p>Width 300px</p>
+</div>
+
+<script>
+		var zoom = 1;
+		alert(zoom);
+		$
+		$('.zoom').on('click', function(){
+		alert("jehff1");
+			zoom += 0.1;
+			$('.target').css('transform', 'scale(' + zoom + ')');
+		});
+		
+		$('.zoom-init').on('click', function(){
+		alert("jehff2");
+			zoom = 1;
+			$('.target').css('transform', 'scale(' + zoom + ')');
+		});
+		$('.zoom-out').on('click', function(){
+		alert("jehff3");
+			zoom -= 0.1;
+			$('.target').css('transform', 'scale(' + zoom + ')');
+		});
+		</script>
+  </body>
+</html>
