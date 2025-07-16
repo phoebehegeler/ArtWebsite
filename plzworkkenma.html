@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title of the document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+   
+      .loginPopup {
+        position: relative;
+        text-align: center;
+        width: 100%;
+      }
+      .formPopup {
+        display: none;
+        position: fixed;
+        left: 50%;
+        top: 25%;
+        transform: translate(-50%, 5%);
+        border: 3px solid #999999;
+        z-index: 9;
+      }
+      .formContainer {
+        max-width: 300px;
+        padding: 20px;
+        background-color: #fff;
+      }
+      .formContainer input[type=text],
+      .formContainer input[type=password] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 20px 0;
+        border: none;
+        background: #eee;
+      }
+      .formContainer input[type=text]:focus,
+      .formContainer input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+      }
+      .formContainer .btn {
+        padding: 12px 20px;
+        border: none;
+        background-color: #5693f5;
+        color: #fff;
+        cursor: pointer;
+        width: 50%;
+        margin-bottom: 15px;
+        opacity: 0.8;
+      }
+      .formContainer .cancel {
+        background-color: #5693f5;
+      }
+      .formContainer .btn:hover,
+      .openButton:hover {
+        opacity: 1;
+      }
+	  
+	  #divsoneline {
+    display: flex;
+    justify-content: center;
+}   
+
+    .close {
+        color: #aaa;
+        float: right;
+		padding-right:8px;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+	  
+	  
+.flip-card1 {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #444;
+  perspective: 1000px; /* 3D effect */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card1:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #444;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.rectangle1 { 
+		 width:300px;
+         height:300px;
+		 padding-top: 0px;
+ 		 background-color:#444;
+         display: table-cell;
+         vertical-align: middle; 
+		   }
+    </style>
+  </head>
+  <body>
+    <h2>Popup Form</h2>
+    <p>Click on the "Open Form" button to open the popup form.</p>
+  
+	<div class="flip-card1">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="Gel Light Watercolor Portrait - Phoebe Hegeler Year 9.jpg" alt="" style="width:275px;height:342px;">
+    </div>
+    <div class="flip-card-back" onclick="openFormshanghai()">
+	<div class="rectangle1 hello"><div class="hi">
+	<h3 class="classhi class"><div class="gl">Shanghai</div>
+	<div class="wp"></div>
+	</div>
+	</div>
+	</div>
+  </div>
+</div>
+</a>
+
+<div class="flip-card1">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="Gel Light Watercolor Portrait - Phoebe Hegeler Year 9.jpg" alt="" style="width:275px;height:342px;">
+    </div>
+    <div class="flip-card-back" onclick="openFormlondon()">
+	<div class="rectangle1 hello"><div class="hi">
+	<h3 class="classhi class"><div class="gl">Shanghai</div>
+	<div class="wp"></div>
+	</div>
+	</div>
+	</div>
+  </div>
+</div>
+</a>
+
+
+    <div class="loginPopup">
+      <div class="formPopup" id="popupFormshanghai">
+	  <a class="close" onclick="closeFormshanghai()">&times;</a>
+        <form action="/action_page.php" class="formContainer">
+          <h2>Please Log in</h2>
+         
+            E-mail
+			<br>
+			<br>
+      
+           <div id="divsoneline">
+          <button type="button" onclick="window.location.href='shanghai2002factors.html';" class="btn">OK</button>
+		  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          <button type="button" class="btn cancel" onclick="closeFormshanghai()">Cancel</button>
+		  </div>
+        </form>
+      </div>
+    </div>
+	
+	  <div class="loginPopup">
+      <div class="formPopup" id="popupFormlondon">
+	  <a class="close" onclick="closeFormlondon()">&times;</a>
+        <form action="/action_page.php" class="formContainer">
+          <h2>Please Log in</h2>
+         
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+			<br>
+			<br>
+      
+           <div id="divsoneline">
+          <button type="button" onclick="window.location.href='london2002factors.html';" class="btn">OK</button>
+		  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          <button type="button" class="btn cancel" onclick="closeFormlondon()">Cancel</button>
+		  </div>
+        </form>
+      </div>
+    </div>
+	
+	
+    <div class="loginPopup">
+      <div class="formPopup" id="popupFormsingapore">
+	  <a class="close" onclick="closeFormsingapore()">&times;</a>
+        <form action="/action_page.php" class="formContainer">
+          <h2>Please Log in</h2>
+         
+            E-mail
+			<br>
+			<br>
+      
+           <div id="divsoneline">
+          <button type="button" onclick="window.location.href='shanghai2002factors.html';" class="btn">OK</button>
+		  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          <button type="button" class="btn cancel" onclick="closeFormsingapore()">Cancel</button>
+		  </div>
+        </form>
+      </div>
+    </div>
+	
+	  <div class="loginPopup">
+      <div class="formPopup" id="popupFormtokyo">
+	  <a class="close" onclick="closeFormtokyo()">&times;</a>
+        <form action="/action_page.php" class="formContainer">
+          <h2>Please Log in</h2>
+         
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+			<br>
+			<br>
+      
+           <div id="divsoneline">
+          <button type="button" onclick="window.location.href='tokyo2002factors.html';" class="btn">OK</button>
+		  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          <button type="button" class="btn cancel" onclick="closeFormtokyo()">Cancel</button>
+		  </div>
+        </form>
+      </div>
+    </div>
+	
+	
+    <div class="loginPopup">
+      <div class="formPopup" id="popupFormny">
+	  <a class="close" onclick="closeFormny()">&times;</a>
+        <form action="/action_page.php" class="formContainer">
+          <h2>Please Log in</h2>
+         
+            E-mail
+			<br>
+			<br>
+      
+           <div id="divsoneline">
+          <button type="button" onclick="window.location.href='ny2002factors.html';" class="btn">OK</button>
+		  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          <button type="button" class="btn cancel" onclick="closeFormny()">Cancel</button>
+		  </div>
+        </form>
+      </div>
+    </div>
+	
+    <script>
+      function openFormshanghai() {
+        document.getElementById("popupFormshanghai").style.display = "block";
+      }
+      function closeFormshanghai() {
+        document.getElementById("popupFormshanghai").style.display = "none";
+		
+      }
+	  function openFormlondon() {
+        document.getElementById("popupFormlondon").style.display = "block";
+      }
+      function closeFormlondon() {
+        document.getElementById("popupFormlondon").style.display = "none";
+      }
+	  function openFormsingapore() {
+        document.getElementById("popupFormshanghai").style.display = "block";
+      }
+      function closeFormsingapore() {
+        document.getElementById("popupFormshanghai").style.display = "none";
+      }
+	  function openFormtokyo() {
+        document.getElementById("popupFormlondon").style.display = "block";
+      }
+      function closeFormtokyo() {
+        document.getElementById("popupFormlondon").style.display = "none";
+      } 
+	  
+	   function openFormny() {
+        document.getElementById("popupFormshanghai").style.display = "block";
+      }
+      function closeFormny() {
+        document.getElementById("popupFormshanghai").style.display = "none";
+      }
+	 
+    </script>
+  </body>
+</html>
