@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Filterable Image Gallery | CodingNepal</title> -->
+ <link href="jesuscss.css" rel="stylesheet"> 
+ <link href="Style.css" rel="stylesheet"> 
+ 
+</head>
+<body>
+  <div class="wrapper">
+    <!-- filter Items -->
+    <nav>
+      <div class="items">
+        <span class="item active" data-name="all">All</span>
+        <span class="item" data-name="watercolor">Watercolor</span>
+        <span class="item" data-name="colorpencil">Color Pencil</span>
+        <span class="item" data-name="collages">Collages</span>
+        <span class="item" data-name="sculptures">Sculptures</span>
+		<span class="item" data-name="sketches">Sketches</span>
+        <span class="item" data-name="portraiture">Portraiture</span>
+      </div>
+	 
+    </nav>
+    <!-- filter Images -->
+    <div class="gallery">
+       <div class="image" data-name="sketches"><span><img src="gl1.png" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"></span></div> 
+	  <div class="image" data-name="sketches"><span><img src="gellightsketch.jpg" onclick="openModal();currentSlide(2)"></span></div> 
+      <div class="image" data-name="sketches"><span><img src="gelllight2 (4).jpg" onclick="openModal();currentSlide(3)"></span></div> 
+       <div class="image" data-name="watercolor"><span><img src="Gellight3.jpg" onclick="openModal();currentSlide(4)"></span></div>
+      <div class="image" data-name="watercolor"><span><img src="Gel Light Watercolor Portrait - Phoebe Hegeler Year 9.jpg" onclick="openModal();currentSlide(5)"></span></div>
+      <div class="image" data-name="sketches"><span><img src="sculpd1.jpg" onclick="openModal();currentSlide(6)"></span></div> 
+       <div class="image" data-name="sketches"><span><img src="hp1.jpg" onclick="openModal();currentSlide(7)"></span></div>
+    <div class="image" data-name="sketches"><span><img src="sculpd2.jpg" onclick="openModal();currentSlide(8)"></span></div> 
+      <div class="image" data-name="sculptures"><span><img src="hpcut2.jpg" onclick="openModal();currentSlide(9)"></span></div> 
+      <div class="image" data-name="sculptures"><span><img src="hp2.jpg" onclick="openModal();currentSlide(10)"></span></div>
+       <div class="image" data-name="sculptures"><span><img src="hpcut1.jpg" onclick="openModal();currentSlide(11)"></span></div> 
+       <div class="image" data-name="sculptures"><span><img src="hpthing1.jpg" onclick="openModal();currentSlide(12)"></span></div>
+      <div class="image" data-name="sculptures"><span><img src="hpthing2.jpg" onclick="openModal();currentSlide(13)"></span></div>
+      <div class="image" data-name="sculptures"><span><img src="hpthing3.jpg" onclick="openModal();currentSlide(14")></span></div> 
+       <div class="image" data-name="sculptures"><span><img src="hppics.jpg" onclick="openModal();currentSlide(15)"></span></div>
+      <div class="image" data-name="sculptures"><span><img src="hppics (2).jpg" onclick="openModal();currentSlide(16)"></span></div> 
+      <div class="image" data-name="headphone"><span><img src="hppics3.jpg" onclick="openModal();currentSlide(17)"></span></div> 
+      <div class="image" data-name="sketches"><span><img src="clothes2.jpg" onclick="openModal();currentSlide(18)"></span></div>
+       <div class="image" data-name="portraiture"><span><img src="Portraiture Clothes.jpg" onclick="openModal();currentSlide(19)"></span></div> 
+       <div class="image" data-name="sketches"><span><img src="beadsketch.jpg" onclick="openModal();currentSlide(20)"></span></div>
+      <div class="image" data-name="portraiture"><span><img src="beads.jpg" onclick="openModal();currentSlide(21)"></span></div>
+      <div class="image" data-name="sketches"><span><img src="pebblesketch.jpg" onclick="openModal();currentSlide(22)"></span></div> 
+       <div class="image" data-name="portraiture"><span><img src="pebbles.jpg" onclick="openModal();currentSlide(23)"></span></div>
+    <div class="image" data-name="sketches"><span><img src="pinsssketch.jpg" onclick="openModal();currentSlide(24)"></span></div> 
+      <div class="image" data-name="portraiture"><span><img src="pins.jpg" onclick="openModal();currentSlide(25)"></span></div> 
+      <div class="image" data-name="sketches"><span><img src="flower1.png" onclick="openModal();currentSlide(26)"></span></div>
+       <div class="image" data-name="watercolor"><span><img src="flower2.png" onclick="openModal();currentSlide(27)"></span></div> 
+       <div class="image" data-name="colorpencil"><span><img src="flower3.png" onclick="openModal();currentSlide(28)"></span></div>
+      <div class="image" data-name="watercolor"><span><img src="flower4.png" onclick="openModal();currentSlide(29)"></span></div>
+      <div class="image" data-name="watercolor"><span><img src="flower5.png" onclick="openModal();currentSlide(30)"></span></div> 
+       <div class="image" data-name="watercolor"><span><img src="watercolorflowers.jpg" onclick="openModal();currentSlide(31)"></span></div>
+	<div class="image" data-name="sketches"><span><img src="parissketch1.png" onclick="openModal();currentSlide(32)"></span></div> 
+      <div class="image" data-name="sketches"><span><img src="parissketch2.png" onclick="openModal();currentSlide(33)"></span></div> 
+      <div class="image" data-name="sketches"><span><img src="parissketch3.png" onclick="openModal();currentSlide(34)"></span></div>
+       <div class="image" data-name="sketches"><span><img src="parissketch4.png" onclick="openModal();currentSlide(35)"></span></div> 
+       <div class="image" data-name="watercolor"><span><img src="parisdrawing.jpg" onclick="openModal();currentSlide(36)"></span></div>
+      <div class="image" data-name="watercolor"><span><img src="paris.jpg" onclick="openModal();currentSlide(37)"></span></div>
+      <div class="image" data-name="sketches"><span><img src="mask1.jpg" onclick="openModal();currentSlide(38)"></span></div>
+	  <div class="image" data-name="sculptures"><span><img src="mask2.jpg" onclick="openModal();currentSlide(39)"></span></div> 
+       <div class="image" data-name="sculptures"><span><img src="mask3.jpg" onclick="openModal();currentSlide(40)"></span></div> 
+      <div class="image" data-name="sculptures"><span><img src="mask4.jpg" onclick="openModal();currentSlide(41)"></span></div> 
+      <div class="image" data-name="sculptures"><span><img src="mask5(2).jpg" onclick="openModal();currentSlide(42)"></span></div>
+       <div class="image" data-name="sculptures"><span><img src="mask6.jpg" onclick="openModal();currentSlide(43)"></span></div> 
+       <div class="image" data-name="sculptures"><span><img src="Mask Summative - Phoebe Hegeler.jpg" onclick="openModal();currentSlide(44)"></span></div>
+      <div class="image" data-name="colorpencil"><span><img src="Mask Illustration - Phoebe Hegeler.jpg" onclick="openModal();currentSlide(45)"></span></div>
+      <div class="image" data-name="watercolor"><span><img src="Color Harmony Watercolor - Phoebe Hegeler.jpg" onclick="openModal();currentSlide(46)"></span></div> 
+       <div class="image" data-name="sculptures"><span><img src="msculpture.jpg" onclick="openModal();currentSlide(47)"></span></div>
+      <div class="image" data-name="sculptures"><span><img src="msculpture2.jpg" onclick="openModal();currentSlide(48)"></span></div> 
+      <div class="image" data-name="sculptures"><span><img src="tissue.jpg" onclick="openModal();currentSlide(49)"></span></div> 
+      <div class="image" data-name="sculptures"><span><img src="oisculpture.jpg" onclick="openModal();currentSlide(50)"></span></div>
+       <div class="image" data-name="sculptures"><span><img src="oisculpture2.jpg" onclick="openModal();currentSlide(51)"></span></div> 
+       <div class="image" data-name="sculptures"><span><img src="reliefflower.jpg" onclick="openModal();currentSlide(52)"></span></div>
+      <div class="image" data-name="collages"><span><img src="dreamscape.jpg" onclick="openModal();currentSlide(53)"></span></div>
+      <div class="image" data-name="collages"><span><img src="Surreal Portrait Summative - Phoebe Hegeler.jpg" onclick="openModal();currentSlide(54)"></span></div> 
+       <div class="image" data-name="sketches"><span><img src="spsketch1.jpg" onclick="openModal();currentSlide(55)"></span></div>
+    <div class="image" data-name="sketches"><span><img src="spsketch2.jpg" onclick="openModal();currentSlide(56)"></span></div> 
+      <div class="image" data-name="sketches"><span><img src="spsketch3.jpg" onclick="openModal();currentSlide(57)"></span></div> 
+      <div class="image" data-name="sketches"><span><img src="selfportrait.jpg" onclick="openModal();currentSlide(58)"></span></div>
+       <div class="image" data-name="sketches"><span><img src="sp1(1).jpg" onclick="openModal();currentSlide(59)"></span></div> 
+       <div class="image" data-name="watercolor"><span><img src="sp2.jpg" onclick="openModal();currentSlide(60)"></span></div>
+      <div class="image" data-name="watercolor"><span><img src="sp3.jpg" onclick="openModal();currentSlide(61)"></span></div>
+      <div class="image" data-name="watercolor"><span><img src="sp4.jpg" onclick="openModal();currentSlide(62)"></span></div> 
+       <div class="image" data-name="watercolor"><span><img src="sp5.jpg" onclick="openModal();currentSlide(63)"></span></div>
+      <div class="image" data-name="watercolor"><span><img src="sp6.jpg" onclick="openModal();currentSlide(64)"></span></div> 
+       <div class="image" data-name="watercolor"><span><img src="sp7.jpg" onclick="openModal();currentSlide(65)"></span></div>
+    <div class="image" data-name="watercolor"><span><img src="Surreal Self Portrait - Phoebe Hegeler.jpg" onclick="openModal();currentSlide(66)"></span></div> 
+      <div class="image" data-name="sketches"><span><img src="twm1.jpg" onclick="openModal();currentSlide(67)"></span></div> 
+      <div class="image" data-name="sketches"><span><img src="twm2.jpg" onclick="openModal();currentSlide(68)"></span></div>
+       <div class="image" data-name="sketches"><span><img src="tm2.jpg" onclick="openModal();currentSlide(69)"></span></div> 
+       <div class="image" data-name="sketches"><span><img src="tm3.jpg" onclick="openModal();currentSlide(70)"></span></div>
+      <div class="image" data-name="sketches"><span><img src="tm4.jpg" onclick="openModal();currentSlide(71)"></span></div>
+      <div class="image" data-name="watercolor"><span><img src="tm5.jpg" onclick="openModal();currentSlide(72)"></span></div> 
+       <div class="image" data-name="watercolor"><span><img src="tm6.jpg" onclick="openModal();currentSlide(73)"></span></div>
+     <div class="image" data-name="watercolor"><span><img src="tm7.jpg" onclick="openModal();currentSlide(74)"></span></div> 
+      <div class="image" data-name="watercolor"><span><img src="tm8.jpg" onclick="openModal();currentSlide(75)"></span></div> 
+      <div class="image" data-name="watercolor"><span><img src="Watercolor Montage - Phoebe Hegeler Grade 9.jpg" onclick="openModal();currentSlide(76)"></span></div>
+       <div class="image" data-name="sketches"><span><img src="triadicsketch.png" onclick="openModal();currentSlide(77)"></span></div> 
+       <div class="image" data-name="sketches"><span><img src="triadicsketch2.png" onclick="openModal();currentSlide(78)"></span></div>
+      <div class="image" data-name="sketches"><span><img src="triadicsketch3.png" onclick="openModal();currentSlide(79)"></span></div>
+      <div class="image" data-name="sketches"><span><img src="triadicsketch4.png" onclick="openModal();currentSlide(80)"></span></div> 
+       <div class="image" data-name="sketches"><span><img src="triadicwithoutcolor(2).jpg" onclick="openModal();currentSlide(81)"></span></div>
+    <div class="image" data-name="colorpencil"><span><img src="Triadic color scheme color pencils.jpg" onclick="openModal();currentSlide(82)"></span></div> 
+       </div>
+  </div>
+
+  <div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+  <div class="mySlides">
+	<center>
+      <div class="numbertext">1 / 82</div>
+      <img src="gl1.png" style="width:26%">
+	  
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">2 / 82</div>
+      <img src="gellightsketch.jpg" style="width:33.2%">
+	  
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">3 / 82</div>
+      <img src="gelllight2 (4).jpg" style="width:28.7%">
+    </div>
+    
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">4 / 82</div>
+      <img src="Gellight3.jpg" style="width:31.9%">
+    </div>
+	
+	<div class="mySlides">
+	<center>
+      <div class="numbertext">5 / 82</div>
+      <img src="Gel Light Watercolor Portrait - Phoebe Hegeler Year 9.jpg" style="width:34.3%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">6 / 82</div>
+      <img src="sculpd1.jpg" style="width:29.7%">
+    </div>
+	 <div class="mySlides">
+	 <center>
+      <div class="numbertext">7 / 82</div>
+      <img src="hp1.jpg" style="width:28.2%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">8 / 82</div>
+      <img src="sculpd2.jpg" style="width:28.7%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">9 / 82</div>
+      <img src="hpcut2.jpg" style="width:35.8%">
+    </div>
+    
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">10 / 82</div>
+      <img src="hp2.jpg" style="width:39.9%">
+    </div>
+	
+	<div class="mySlides">
+	<center>
+      <div class="numbertext">11 / 82</div>
+      <img src="hpcut1.jpg" style="width:27.3%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">12 / 82</div>
+      <img src="hpthing1.jpg" style="width:20.85%">
+    </div>
+	  <div class="mySlides">
+	  <center>
+      <div class="numbertext">13 / 82</div>
+      <img src="hpthing2.jpg" style="width:26.5%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">14 / 82</div>
+      <img src="hpthing3.jpg" style="width:23.45%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">15 / 82</div>
+      <img src="hppics.jpg" style="width:27.45%">
+    </div>
+    
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">16 / 82</div>
+      <img src="hppics (2).jpg" style="width:23.5%">
+    </div>
+	
+	<div class="mySlides">
+	<center>
+      <div class="numbertext">17 / 82</div>
+      <img src="hppics3.jpg" style="width:29.5%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">18 / 82</div>
+      <img src="clothes2.jpg" style="width:50.8%">
+    </div>
+	 <div class="mySlides">
+	 <center>
+      <div class="numbertext">19 / 82</div>
+      <img src="Portraiture Clothes.jpg" style="width:49.3%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">20 / 82</div>
+      <img src="beadsketch.jpg" style="width:59.5%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">21 / 82</div>
+      <img src="beads.jpg" style="width:37.7%">
+    </div>
+    
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">22 / 82</div>
+      <img src="pebblesketch.jpg" style="width:60.4%">
+    </div>
+	
+	<div class="mySlides">
+	<center>
+      <div class="numbertext">23 / 82</div>
+      <img src="pebbles.jpg" style="width:31.6%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">24 / 82</div>
+      <img src="pinsssketch.jpg" style="width:61%">
+    </div>
+	
+	    <div class="mySlides">
+		<center>
+      <div class="numbertext">25 / 82</div>
+      <img src="pins.jpg" style="width:45%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">26 / 82</div>
+      <img src="flower1.png" style="width:30.2%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">27 / 82</div>
+      <img src="flower2.png" style="width:34.5%">
+    </div>
+    
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">28 / 82</div>
+      <img src="flower3.png" style="width:35.6%">
+    </div>
+	
+	<div class="mySlides">
+	<center>
+      <div class="numbertext">29 / 82</div>
+      <img src="flower4.png" style="width:32.4%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">30 / 82</div>
+      <img src="flower5.png" style="width:51.6%">
+    </div>
+	 <div class="mySlides">
+	 <center>
+      <div class="numbertext">31 / 82</div>
+      <img src="watercolorflowers.jpg" style="width:56.2%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">32 / 82</div>
+      <img src="parissketch1.png" style="width:30.7%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">33 / 82</div>
+      <img src="parissketch2.png" style="width:31.8%">
+    </div>
+    
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">34 / 82</div>
+      <img src="parissketch3.png" style="width:32.1%">
+    </div>
+	
+	<div class="mySlides">
+	<center>
+      <div class="numbertext">35 / 82</div>
+      <img src="parissketch4.png" style="width:34.8%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">36 / 82</div>
+      <img src="parisdrawing.jpg" style="width:31.6%">
+    </div>
+	
+	  <div class="mySlides">
+	  <center>
+      <div class="numbertext">37 / 82</div>
+      <img src="paris.jpg" style="width:32%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">38 / 82</div>
+      <img src="mask1.jpg" style="width:39.7%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">39 / 82</div>
+      <img src="mask2.jpg" style="width:36.05%">
+    </div>
+    
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">40 / 82</div>
+      <img src="mask3.jpg" style="width:28.9%">
+    </div>
+	
+	<div class="mySlides">
+	<center>
+      <div class="numbertext">41 / 82</div>
+      <img src="mask4.jpg" style="width:42.8%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">42 / 82</div>
+      <img src="mask5(2).jpg" style="width:40.3%">
+    </div>
+	
+	 <div class="mySlides">
+	 <center>
+      <div class="numbertext">43 / 82</div>
+      <img src="mask6.jpg" style="width:36.7%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">44 / 82</div>
+      <img src="Mask Summative - Phoebe Hegeler.jpg" style="width:36.1%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">45 / 82</div>
+      <img src="Mask Illustration - Phoebe Hegeler.jpg" style="width:31.2%">
+    </div>
+    
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">46 / 82</div>
+      <img src="Color Harmony Watercolor - Phoebe Hegeler.jpg" style="width:60.2%">
+    </div>
+	
+	<div class="mySlides">
+      <div class="numbertext">47 / 82</div>
+	  <center>
+      <img src="msculpture.jpg" style="width:62.1%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">48 / 82</div>
+	  <center>
+      <img src="msculpture2.jpg" style="width:48.6%">
+    </div>
+	
+	    <div class="mySlides">
+		<center>
+      <div class="numbertext">49 / 82</div>
+      <img src="tissue.jpg" style="width:57.1%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">50 / 82</div>
+      <img src="oisculpture.jpg" style="width:42.5%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">51 / 82</div>
+      <img src="oisculpture2.jpg" style="width:62.3%">
+    </div>
+    
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">52 / 82</div>
+      <img src="reliefflower.jpg" style="width:57.7%">
+    </div>
+	
+	<div class="mySlides">
+	<center>
+      <div class="numbertext">53 / 82</div>
+      <img src="dreamscape.jpg" style="width:30.7%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">54 / 82</div>
+      <img src="Surreal Portrait Summative - Phoebe Hegeler.jpg" style="width:36.6%">
+    </div>
+	 <div class="mySlides">
+	 <center>
+      <div class="numbertext">55 / 82</div>
+      <img src="spsketch1.jpg" style="width:34.9%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">56 / 82</div>
+      <img src="spsketch2.jpg" style="width:31.8%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">57 / 82</div>
+      <img src="spsketch3.jpg" style="width:43.2%">
+    </div>
+    
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">58 / 82</div>
+      <img src="selfportrait.jpg" style="width:29.5%">
+    </div>
+	
+	<div class="mySlides">
+	<center>
+      <div class="numbertext">59 / 82</div>
+      <img src="sp1(1).jpg" style="width:29.7%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">60 / 82</div>
+      <img src="sp2.jpg" style="width:29.5%">
+    </div>
+	  <div class="mySlides">
+	  <center>
+      <div class="numbertext">61 / 82</div>
+      <img src="sp3.jpg" style="width:31.8%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">62 / 82</div>
+      <img src="sp4.jpg" style="width:35.5%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">63 / 82</div>
+      <img src="sp5.jpg" style="width:28%">
+    </div>
+    
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">64 / 82</div>
+      <img src="sp6.jpg" style="width:29.7%">
+    </div>
+	
+	<div class="mySlides">
+	<center>
+      <div class="numbertext">65 / 82</div>
+      <img src="sp7.jpg" style="width:28.9%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">66 / 82</div>
+      <img src="Surreal Self Portrait - Phoebe Hegeler.jpg" style="width:29.3%">
+    </div>
+	 <div class="mySlides">
+	 <center>
+      <div class="numbertext">67 / 82</div>
+      <img src="twm1.jpg" style="width:30.6%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">68 / 82</div>
+      <img src="twm2.jpg" style="width:30.9%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">69 / 82</div>
+      <img src="tm2.jpg" style="width:29.7%">
+    </div>
+    
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">70 / 82</div>
+      <img src="tm3.jpg" style="width:31.1%">
+    </div>
+	
+	<div class="mySlides">
+	<center>
+      <div class="numbertext">71 / 82</div>
+      <img src="tm4.jpg" style="width:30.1%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">72 / 82</div>
+      <img src="tm5.jpg" style="width:32.1%">
+    </div>
+	
+	    <div class="mySlides">
+		<center>
+      <div class="numbertext">73 / 82</div>
+      <img src="tm6.jpg" style="width:28.4%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">74 / 82</div>
+      <img src="tm7.jpg" style="width:29.3%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">75 / 82</div>
+      <img src="tm8.jpg" style="width:29.4%">
+    </div>
+    
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">76 / 82</div>
+      <img src="Watercolor Montage - Phoebe Hegeler Grade 9.jpg" style="width:31.8%">
+    </div>
+	
+	<div class="mySlides">
+	<center>
+      <div class="numbertext">77 / 82</div>
+      <img src="triadicsketch.png" style="width:57.2%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">78 / 82</div>
+	  <center>
+      <img src="triadicsketch2.png" style="width:60.1%">
+    </div>
+	 <div class="mySlides">
+      <div class="numbertext">79 / 82</div>
+	  <center>
+      <img src="triadicsketch3.png" style="width:60.5%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">80 / 82</div>
+      <img src="triadicsketch4.png" style="width:28.2%">
+    </div>
+
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">81 / 82</div>
+      <img src="triadicwithoutcolor(2).jpg" style="width:31%">
+    </div>
+    
+    <div class="mySlides">
+	<center>
+      <div class="numbertext">82 / 82</div>
+      <img src="Triadic color scheme color pencils.jpg" style="width:33.5%">
+    </div>
+    
+<!--lets person move next of back-->
+<div id="element">
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+  
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+/*closes pic*/
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+/*to move back adn forth*/
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+/*shows current slide*/
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  /*list of pics*/
+  var slides = document.getElementsByClassName("mySlides");
+  
+  /*if on last slide going to next back to first pic*/
+  if (n > slides.length) {slideIndex = 1}
+  /*if on first slide go to previous go to last pic*/
+  if (n < 1) {slideIndex = slides.length}
+  /*showing next pics*/
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  /*close zoomed in pic*/
+  slides[slideIndex-1].style.display = "block";
+
+}
+
+
+//selecting all required elements
+const filterItem = document.querySelector(".items");
+const filterImg = document.querySelectorAll(".gallery .image");
+
+window.onload = ()=>{ //after window loaded
+  filterItem.onclick = (selectedItem)=>{ //if user click on a button
+	if(selectedItem.target.classList.contains("item")){ //if user selected item has .item class
+      filterItem.querySelector(".active").classList.remove("active"); //remove the active class which is in first item
+      selectedItem.target.classList.add("active"); //add that active class on user selected item
+	  let filterName = selectedItem.target.getAttribute("data-name"); //getting data-name value of user selected item and store in a filtername variable
+	  //problem here probably
+	  filterImg.forEach((image) => {
+        let filterImges = image.getAttribute("data-name"); //getting image data-name value
+		//or here 
+		//if user selected item data-name value is equal to images data-name value
+        //or user selected item data-name value is equal to "all"
+        if((filterImges == filterName) || (filterName == "all")){
+          image.classList.remove("hide"); //first remove the hide class from the image
+          image.classList.add("show"); //add show class in image
+        }else{
+          image.classList.add("hide"); //add hide class in image
+          image.classList.remove("show");} //remove show class from the image
+		if(!(filterName == "all")){
+		  document.getElementById("element").style.display = "none";
+		  
+        }
+		else{
+		  document.getElementById("element").style.display = "block";
+          } 
+      });
+    }
+  }
+  for (let i = 0; i < filterImg.length; i++) {
+    filterImg[i].setAttribute("onclick", "preview(this)"); //adding onclick attribute in all available images
+  }
+}
+
+</script>
+    
+</body>
+</html>
