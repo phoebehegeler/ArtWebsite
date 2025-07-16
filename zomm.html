@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Mon, 08 May 2023 00:27:09 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+    <style>
+	body {
+  margin: 30px;
+}
+
+.box {
+  display: inline-block;
+  background: linear-gradient(25deg, #F13F79, #FFC778); 
+  color: white;
+  font-size: 25px;
+  padding: 40px;
+  width: 300px;
+  height: 300px;
+}
+
+.btn {
+  width: 30px;
+  height: 30px;
+  background: #FFF;
+  border: 1px solid black;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  color: black;
+  padding: 15px 10px 5px;
+  position: fixed;
+  text-align: center;
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+	transition: all 0.3s ease;
+  z-index: 1;
+}
+.btn:hover {
+  background: #eef;
+}
+
+.zoomin {
+  bottom: 190px;
+}
+
+.zoomout {
+  bottom: 120px;
+}
+.zoomreset {
+  bottom: 50px;
+}
+
+#asoneline {
+    display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.phoebe{
+-moz-osx-font-smoothing:grayscale;
+-webkit-font-smoothing:antialiased;
+display:inline-block;font-style:normal;
+font-variant:normal;
+text-rendering:auto;
+line-height:1
+}
+
+.fa-search-plus:before{
+content:"\f00e"
+}
+
+.fa-search-minus:before{
+content:"\f010"
+}
+
+.fa-recycle:before{
+content:"\f1b8"
+}
+	</style>
+    <!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+
+<div id="asoneline">
+<a class="btn zoomin"><i class="fas fa-search-plus"></i></a>
+<a class="btn zoomout"><i class="fas fa-search-minus"></i></a>
+<a class="btn zoomreset"><i class="fas fa-recycle"></i></a>
+</div>
+
+<div class="box target">
+  <h3>Target Box</h3>
+  <p>Height 300px</p>
+  <p>Width 300px</p>
+</div>
+<div class="box not-target">
+  <h3>Not Target Box</h3>
+  <p>Height 300px</p>
+  <p>Width 300px</p>
+</div>
+
+<script>
+var zoom = 1;
+
+var target = document.getElementsByClassName("target");
+var zoomin = document.getElementsByClassName("zoomin");
+var zoomout = document.getElementsByClassName("zoomout");
+var zoomreset = document.getElementsByClassName("zoomreset");
+
+zoomin[0].onclick = function() {
+  zoom += 0.1;
+  target[0].style.transform = 'scale(' + zoom + ',' + zoom + ')';
+  
+};
+
+zoomout[0].onclick = function() {
+  zoom -= 0.1;
+  target[0].style.transform = 'scale(' + zoom + ')';
+};
+
+zoomreset[0].onclick = function() {
+  zoom = 1;
+  target[0].style.transform = 'scale(' + zoom + ')';
+};
+
+/*var zoom = 1;
+		
+		$('.zoom').on('click', function(){
+			zoom += 0.1;
+			$('.target').css('transform', 'scale(' + zoom + ')');
+		});
+		$('.zoom-init').on('click', function(){
+			zoom = 1;
+			$('.target').css('transform', 'scale(' + zoom + ')');
+		});
+		$('.zoom-out').on('click', function(){
+			zoom -= 0.1;
+			$('.target').css('transform', 'scale(' + zoom + ')');
+		});
+
+*/
+</script>
+
+  </body>
+</html>

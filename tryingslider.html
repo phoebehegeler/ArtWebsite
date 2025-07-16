@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Fri, 10 Mar 2023 00:39:48 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+    <link href="tryingslidercss.css" rel="stylesheet"> 
+ 
+    <!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+<div class="slideshow-container">
+<div class="slideshow-inner">
+  <div class="mySlides fade">
+
+    <img  src="watercolorflowers.jpg" style="width:100%;height:530px;" alt="watercolor flowers"/>
+    <div class="text">Watercolor Flowers</div>
+  </div>
+
+  <div class="mySlides fade">
+
+    <img  src="Color Harmony Watercolor - Phoebe Hegeler.jpg" style="width:100%;height:530px;" alt="color harmony"/>
+    <div class="text">Complementary Color Scheme Watercolor Artwork </div>
+  </div>
+
+  <div class="mySlides fade">
+
+    <img  src="2D Sculpture.jpg" style="width:100%;height:530px;" alt="2D Sculpture"/>
+    <div class="text">Relief Sculpture</div>
+  </div>
+
+  <div class="mySlides fade">
+
+    <img  src="Color Harmony Watercolor - Phoebe Hegeler.jpg" style="width:100%;height:530px;" alt="pelican"/>
+    <div class="text">Pelican</div>
+  </div>
+  
+  </div>
+
+
+  <a class="prev" onclick='plusSlides(-1)'>&#10094;</a>
+  <a class="next" onclick='plusSlides(1)'>&#10095;</a>
+</div>
+<br/>
+
+
+<div style='text-align: center;'>
+  <span class="dot" onclick='currentSlide(1)'></span>
+  <span class="dot" onclick='currentSlide(2)'></span>
+  <span class="dot" onclick='currentSlide(3)'></span>
+  <span class="dot" onclick='currentSlide(4)'></span>
+</div>
+
+</div>
+
+<script>
+var slideIndex = 1;
+
+var myTimer;
+
+var slideshowContainer;
+
+window.addEventListener("load",function() {
+    showSlides(slideIndex);
+    myTimer = setInterval(function(){plusSlides(1)}, 1000);
+  
+    //COMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+    slideshowContainer = document.getElementsByClassName('slideshow-inner')[0];
+  
+    //UNCOMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+    // slideshowContainer = document.getElementsByClassName('slideshow-container')[0];
+  
+    slideshowContainer.addEventListener('mouseenter', pause)
+    slideshowContainer.addEventListener('mouseleave', resume)
+})
+
+// NEXT AND PREVIOUS CONTROL
+function plusSlides(n){
+  clearInterval(myTimer);
+  if (n < 0){
+    showSlides(slideIndex -= 1);
+  } else {
+   showSlides(slideIndex += 1); 
+  }
+  
+  //COMMENT OUT THE LINES BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+  
+  if (n === -1){
+    myTimer = setInterval(function(){plusSlides(n + 2)}, 1000);
+  } else {
+    myTimer = setInterval(function(){plusSlides(n + 1)}, 1000);
+  }
+}
+
+//Controls the current slide and resets interval if needed
+function currentSlide(n){
+  clearInterval(myTimer);
+  myTimer = setInterval(function(){plusSlides(n + 1)}, 1000);
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n){
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+pause = () => {
+  clearInterval(myTimer);
+}
+
+resume = () =>{
+  clearInterval(myTimer);
+  myTimer = setInterval(function(){plusSlides(slideIndex)}, 1000);
+}
+</script>
+
+  </body>
+</html>

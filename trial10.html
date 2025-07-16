@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="Style.css" rel="stylesheet"> 
+
+</style>
+</head>
+<body>
+
+<button onclick="topFunction()" id="ScrollTop">Top</button>
+
+jdfjnfnd<br>
+jdfjnfnd<br>
+jdfjnfnd<br>
+jdfjnfnd<br><p>jdfjnfnd<br><p>jdfjnfnd<br><p>jdfjnfnd<br><p>jdfjnfnd<br><p>v<p>v<p><p>
+jdfjnfnd<br></p></p></p></p></p></p></p></p>
+jdfjnfnd<br>
+jdfjnfnd<br><p>jdfjnfnd<br><p>jdfjnfnd<br><p>v
+jdfjnfnd<br></p></p></p>
+
+<script>
+// Get the button
+mybutton = document.getElementById("ScrollTop");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>

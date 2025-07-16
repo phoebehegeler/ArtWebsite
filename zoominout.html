@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Mon, 06 Mar 2023 01:29:19 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+    
+    <!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+ <center>
+<img id="pic" src="gelllight2 (3).jpg" alt="" />
+<button onclick="zoomIn()">Zoom-In</button>
+<button onclick="zoomOut()">Zoom-Out</button>
+</center>
+
+<script>
+function zoomIn() {
+var pic = document.getElementById("pic");
+var width = pic.clientWidth;
+pic.style.width = width + 100 + "px";
+}
+
+function zoomOut() {
+var pic = document.getElementById("pic");
+var width = pic.clientWidth;
+pic.style.width = width - 100 + "px";
+}
+
+</script>
+  </body>
+</html>
